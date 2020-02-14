@@ -67,6 +67,16 @@ public class Controller {
         } else System.out.println(dictionary.getNewWord().get(result).getWordExplain());
     }
 
+    public void dictionarySearcher() {
+        String find = scan.nextLine().trim();
+        System.out.println(dictionary.getNewWord().size());
+        for (int i = 0; i < dictionary.getNewWord().size(); i++) {
+            if (dictionary.getNewWord().get(i).getWordTarget().indexOf(find) == 0) {
+                dictionary.getNewWord().get(i).printWord();
+            }
+        }
+    }
+
     public void addWord() {
         String addTarget = scan.nextLine().trim();
         String addExplain = scan.nextLine();
@@ -88,16 +98,6 @@ public class Controller {
             }
         }
         if (m == 0) System.out.println("Khong tim thay tu ban muon xoa!!!");
-    }
-
-    public void dictionarySearcher() {
-        String find = scan.nextLine().trim();
-        System.out.println(dictionary.getNewWord().size());
-        for (int i = 0; i < dictionary.getNewWord().size(); i++) {
-            if (dictionary.getNewWord().get(i).getWordTarget().indexOf(find) == 0) {
-                dictionary.getNewWord().get(i).printWord();
-            }
-        }
     }
 
     public void updateDictionary() {
@@ -124,7 +124,6 @@ public class Controller {
             System.out.println("fail");
         }
     }
-
 
     public static void Menu() {
         System.out.println("\t\tDICTIONARY");
