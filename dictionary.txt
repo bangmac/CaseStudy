@@ -1901,6 +1901,7 @@ officer	vien chuc, canh sat, si quan
 official	chinh quyen, van phong; vien chuc, cong chuc
 officially	mot cach trinh trong, mot cach chinh thu
 old fashioned	loi thoi
+omachi	
 on board	tren tau thuy
 on purpose	co tinh, co y, co chu tam
 once	mot lan; khi ma, ngay khi, mot khi
