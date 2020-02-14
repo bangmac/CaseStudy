@@ -111,6 +111,21 @@ public class Controller {
         } else System.out.println("Khong tim thay tu can sua!!!");
     }
 
+    public void dictionaryExportToFile() {
+        BufferedWriter output = null;
+        try {
+            output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("dictionary.txt"), "UTF-8"));
+            for (Word element : dictionary.getNewWord()) {
+                output.write(element.getWordTarget() + "\t" + element.getWordExplain());
+                output.newLine();
+            }
+            output.close();
+        } catch (IOException ex) {
+            System.out.println("fail");
+        }
+    }
+
+
     public static void Menu() {
         System.out.println("\t\tDICTIONARY");
         System.out.println("\t1: Show Dictionary");
@@ -160,20 +175,6 @@ public class Controller {
                     System.exit(0);
                     break;
             }
-        }
-    }
-
-    public void dictionaryExportToFile() {
-        BufferedWriter output = null;
-        try {
-            output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("dictionary.txt"), "UTF-8"));
-            for (Word element : dictionary.getNewWord()) {
-                output.write(element.getWordTarget() + "\t" + element.getWordExplain());
-                output.newLine();
-            }
-            output.close();
-        } catch (IOException ex) {
-            System.out.println("fail");
         }
     }
 
