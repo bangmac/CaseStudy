@@ -57,8 +57,6 @@ public class Controller {
         int result = Collections.binarySearch(dictionary.getNewWord(), new Word(find, null), a);
         if (result < 0) return -1;
         else return result;
-
-
     }
 
     public void dictionaryLookup() {
