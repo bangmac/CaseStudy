@@ -64,8 +64,7 @@ public class Controller {
         int result = LookUp(find);
         if (result < 0) {
             System.out.println("Khong tim thay tu can tra!!!");
-        } else
-            System.out.println(dictionary.getNewWord().get(result).getWordExplain());
+        } else System.out.println(dictionary.getNewWord().get(result).getWordExplain());
     }
 
     public void dictionarySearcher() {
@@ -177,4 +176,6 @@ public class Controller {
             }
         }
     }
+
+
 }
